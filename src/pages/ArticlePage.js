@@ -16,7 +16,7 @@ const ArticlePage = () => {
   useEffect(() => {
     const loadArticleInfo = async () => {
       const token = user && (await user.getIdToken());
-      const headers = token ? { authoken: token } : {};
+      const headers = token ? { authtoken: token } : {};
       const response = await axios.get(`/api/articles/${articleId}`, {
         headers,
       });
