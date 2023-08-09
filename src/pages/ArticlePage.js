@@ -38,7 +38,7 @@ const ArticlePage = () => {
 
   const addUpvote = async () => {
     const token = user && (await user.getIdToken());
-    const headers = token ? { authoken: token } : {};
+    const headers = token ? { authtoken: token } : {};
     const response = await axios.put(
       `/api/articles/${articleId}/upvote`,
       null,
